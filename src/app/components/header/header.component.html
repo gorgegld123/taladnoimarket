@@ -1,0 +1,209 @@
+<!-- Header Start -->
+<div class="header-area">
+    <div class="main-header ">
+        <div class="header-bottom  header-sticky">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                        <!-- Main-menu -->
+                        <div class="main-menu f-right d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a [routerLink]="['/']" routerLinkActive="router-link-active">หน้าแรก</a></li>
+                                    <li><a [routerLink]="['/cart']" routerLinkActive="router-link-active">ร้านค้า</a>
+                                    </li>
+                                    <li><a [routerLink]="['/products']"
+                                            routerLinkActive="router-link-active">สินค้าแนะนำ</a>
+                                        <ul class="submenu">
+                                            <li><a href="product_list.html"> สินค้ามาใหม่</a></li>
+                                            <li><a href="single-product.html"> สินค้าขายดี</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="http://web.rmutp.ac.th/bus/taladnoijourney/">Blog</a>
+                                        <ul class="submenu">
+                                            <li><a href="http://web.rmutp.ac.th/bus/taladnoijourney/review">Review</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="submenu">
+                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="cart.html">Card</a></li>
+                                            <li><a href="elements.html">Element</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="confirmation.html">Confirmation</a></li>
+                                            <li><a href="cart.html">Shopping Cart</a></li>
+                                            <li><a href="checkout.html">Product Checkout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a [routerLink]="['/auth/dashboard']"
+                                            routerLinkActive="router-link-active">Dashboard</a>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-2 col-md-2 col-sm-2 fix-card topbar">
+                        <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between ">
+                            <li class="d-none d-xl-block">
+                                <div class="form-box f-right ">
+                                    <input type="text" name="Search" placeholder="Search products">
+                                    <div class="search-icon" (click)="onAddtoCart()">
+                                        <i class="fas fa-search special-tag"></i>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="d-none d-xl-block shopping-card dropdown no-arrow" id="messagesDropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-shopping-cart"></i>
+                                <!-- Dropdown - Messages -->
+                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow "
+                                    style="margin-top: 20px;" aria-labelledby="messagesDropdown">
+                                    <h6 class="dropdown-header" style="font-size: 14px;">
+                                        สินค้าในตะกร้าสินค้า
+                                    </h6>
+                                    <div *ngIf="cartItems.length === 0" class="alert alert-danger"> 
+                                        <span>ไม่มีสินค้าในตะกร้าสินค้า !</span>
+                                    </div>
+                                    <a class="dropdown-item d-flex align-items-center">
+                                         <!-- <div class="dropdown-list-image mr-3">
+                                            <img class="rounded-circle"
+                                                src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                            <div class="status-indicator bg-success"></div>
+                                        </div>                       -->
+
+                                       
+                                        <div *ngIf="cartItems.length > 0 " class="font-weight-bold">
+                                            <li class="list-group-item no-border" *ngFor="let item of cartItems; let i= index;" >
+                                                <img class="dropdown-list-image mr-3 rounded-circle"
+                                                src="http://localhost/taladnoi/upload/product/{{i.image}}" alt="">
+                                                
+                                                สินค้า : <strong>{{item.pname}} </strong><span>ราคา : {{item.price}} </span>
+                                            </li>
+                                            <div class="small text-gray-500"><strong>Total</strong> {{100 | currency: 'THB'}} </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="d-none d-lg-block"> <a href="http://localhost/taladnoi/back/user/login"
+                                    class="btn header-btn">เข้าสู่ระบบ</a></li>
+                        </ul>
+                    </div>
+           
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none">
+                            <div class="slicknav_menu">
+                                <a class="slicknav_btn slicknav_collapsed" href="#" data-toggle="collapse"
+                                    data-target="#slick" aria-expanded="true" aria-controls="slick"
+                                    style="outline: none;"><span class="slicknav_menutxt">MENU</span><span
+                                        class="slicknav_icon"><span class="slicknav_icon-bar"></span><span
+                                            class="slicknav_icon-bar"></span><span
+                                            class="slicknav_icon-bar"></span></span></a>
+
+                                <ul class="slicknav_nav slicknav_hidden collapse" id="slick"
+                                    aria-labelledby="headingTwo" aria-hidden="true" role="menu">
+                                    <li><a href="index.html" role="menuitem" tabindex="-1">Home</a></li>
+                                    <li><a href="Catagori.html" role="menuitem" tabindex="-1">Catagori</a></li>
+                                    <li class="hot slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                            aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                            style="outline: none;"><a href="#" tabindex="-1">Latest</a>
+                                            <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true"
+                                            style="display: none;">
+                                            <li><a href="product_list.html" role="menuitem" tabindex="-1"> Product
+                                                    list</a></li>
+                                            <li><a href="single-product.html" role="menuitem" tabindex="-1"> Product
+                                                    Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a h ref="#" role="menuitem"
+                                            aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                            style="outline: none;"><a href="blog.html" tabindex="-1">Blog</a>
+                                            <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true"
+                                            style="display: none;">
+                                            <li><a href="blog.html" role="menuitem" tabindex="-1">Blog</a></li>
+                                            <li><a href="single-blog.html" role="menuitem" tabindex="-1">Blog
+                                                    Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem"
+                                            aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"
+                                            style="outline: none;"><a href="#" tabindex="-1">Pages</a>
+                                            <span class="slicknav_arrow">+</span></a>
+                                        <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true"
+                                            style="display: none;">
+                                            <li><a href="login.html" role="menuitem" tabindex="-1">Login</a></li>
+                                            <li><a href="cart.html" role="menuitem" tabindex="-1">Card</a></li>
+                                            <li><a href="elements.html" role="menuitem" tabindex="-1">Element</a></li>
+                                            <li><a href="about.html" role="menuitem" tabindex="-1">About</a></li>
+                                            <li><a href="confirmation.html" role="menuitem"
+                                                    tabindex="-1">Confirmation</a></li>
+                                            <li><a href="cart.html" role="menuitem" tabindex="-1">Shopping Cart</a></li>
+                                            <li><a href="checkout.html" role="menuitem" tabindex="-1">Product
+                                                    Checkout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a [routerLink]="['/dashboard']"
+                                            routerLinkActive="router-link-active">Contact</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+<section class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ID</th>
+              <th scope="col">ชื่อสินค้า</th>
+              <th scope="col">ราคาขาย</th>
+              <th scope="col">ประเภท</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <div *ngFor="let key of Object.keys(cartItems)">
+                <p>Key-> {{key}} and value is -> {{cartItems[key]}}</p>
+              </div> -->
+            <!-- <tbody>
+                <tr *ngFor="let row of cartItems;let i = index;">
+                  <td>{{i}}</td>
+                  <td *ngFor="let c of row">{{c}}</td>
+                </tr>
+              </tbody> -->
+            <tr *ngFor="let row of cartItems">
+              <!-- <th scope="row">{{row}}</th> -->
+              <td *ngFor="let c of row.product">
+                  {{c.pname}} {{c.price}}
+              </td>
+              
+              <!-- <td><img src={{p.image}}></td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  
+  
+  </section>
+
+<!-- Jquery Mobile Menu -->
+<script src="/assets/js/jquery.slicknav.min.js"></script>

@@ -1,0 +1,254 @@
+body{
+    margin-top:20px;
+}
+
+a {
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > div {
+  border: 0.5px 
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-button {
+  color: #4e4e4e;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-button :hover{
+    color: #ffffff;
+}
+li.list-block{
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.caption {
+  padding: 9px;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+/* line 230, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.btn {
+  padding: 10px 20px;
+  line-height: 1.25;
+  background: #dc3545;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background: #98232e;
+}
+
+.btn:hover::before {
+  color: #98232e !important;
+  z-index: -1;
+}
+
+/* line 287, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/* line 291, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.hero-btn {
+  padding: 25px 29px;
+}
+
+/* line 296, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.black-btn {
+  background: #000;
+  box-shadow: 0px 20px 50px 0px rgba(22, 22, 22, 0.2);
+  transform: translateY(0px);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 0;
+  margin-bottom: 0;
+  padding: 27px 44px;
+  border-radius: 25px;
+}
+
+/* line 311, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.black-btn:hover {
+  box-shadow: 0px 20px 50px 0px rgba(12, 9, 9, 0.2);
+  transform: translateY(-3px);
+}
+
+/* line 316, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.shop1-btn {
+  box-shadow: 0px 20px 50px 0px rgba(37, 119, 253, 0.2);
+}
+
+/* line 321, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.border-btn {
+  background: none;
+  -moz-user-select: none;
+  border: 2px solid #ff003c;
+  padding: 18px 38px;
+  margin: 10px;
+  text-transform: capitalize;
+  color: #ff003c;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  border-radius: 5px;
+  position: relative;
+  transition: color 0.4s linear;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* line 341, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.border-btn::before {
+  border: 2px solid transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff003c;
+  z-index: -1;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleY(0);
+}
+
+
+/* line 359, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.border-btn:hover::before {
+  transform: scaleY(1);
+  order: 2px solid transparent;
+}
+
+/* line 364, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.border-btn.border-btn2 {
+  padding: 17px 52px;
+}
+
+/* line 369, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.send-btn {
+  background: #ff003c;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* line 383, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.send-btn::before {
+  border: 2px solid transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #e6373d;
+  color: #ff003c;
+  z-index: -1;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+}
+
+/* line 402, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
+.send-btn:hover::before {
+  transform: scaleY(1);
+  order: 2px solid transparent;
+  color: red;
+}
+
+.list-group-item{
+  padding: 15px;
+  color: #000;
+}
+
+.list-group-item:hover{
+  color: #dc3545;
+  text-shadow: 1px 1px 0px color, 2px 2px 0px color, 3px 3px 0px 
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  }
+
+.product-filters {
+    position: relative;
+    border-radius: 2.5rem;
+    @media (min-widgth: 376px){
+      width: 33%
+    }
+  }
+
+.search-filter input{
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: inherit;
+    margin-bottom : 15px;
+  }
+
+.search-icon {
+  position: absolute;
+    top: 12px;
+    right: 17px;
+}

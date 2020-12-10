@@ -1,0 +1,67 @@
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: #f5f5f5
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Kanit', sans-serif;
+  color: #111111;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: normal;
+}
+
+.a {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+}
+
+.hedding{
+	font-size: 20px;
+	color:#ab8181;
+}
+.main-section{
+	position: absolute;
+	left:50%;
+	right:50%;
+	transform: translate(-50%,5%);
+}
+.left-side-product-box img{
+	width: 100%;
+}
+.left-side-product-box .sub-img img{
+	margin-top:5px;
+	width:83px;
+	height:100px;
+}
+.right-side-pro-detail span{
+    font-family: 'Kanit', sans-serif;
+	font-size:16px;
+}
+.right-side-pro-detail p{
+	font-size:25px;
+	color: dimgray;
+}
+.right-side-pro-detail .price-pro{
+    font-size: 17px;
+	color:#E45641;
+}
+.right-side-pro-detail .tag-section{
+	font-size:18px;
+	color:#5D4C46;
+}
+.pro-box-section .pro-box img{
+	width: 100%;
+	height:200px;
+}
+@media (min-width:360px) and (max-width:640px) {
+	.pro-box-section .pro-box img{
+		height:auto;
+	}
+}

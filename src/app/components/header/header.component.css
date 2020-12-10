@@ -1,0 +1,6 @@
+.form-box input {
+    border: 1px solid #eeeeee;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 100%;
+}
